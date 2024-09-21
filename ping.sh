@@ -1,4 +1,11 @@
 #!/bin/bash
+
+#########################################################
+#                                                       #
+#    https://github.com/pb1sam/dapnet_status_scripts    #
+#                                                       #
+#########################################################
+
 # HOSTS    = Hostnames or IP addresses from hosts to check for availability,
 #            seperated by spaces, for example 'localhost 127.0.0.1'
 # LOGIN    = Login name/callsign for hampager.de, for example 'N0CALL'
@@ -40,8 +47,8 @@ do
     fi
 
  else
-    CHECK1=`grep "$myHost" $STATE | grep -o "down"`
-    if [ "$CHECK1" = "down" ]; then
+    CHECK=`grep "$myHost" $STATE | grep -o "down"`
+    if [ "$CHECK" = "down" ]; then
 # Uncomment beneath line for output to terminal
     #echo -e "host $myHost ping ok"
     STATUS="ping ok"
